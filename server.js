@@ -1,23 +1,19 @@
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000;
 
-const app = express();
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true })); // check
+app.use(express.json()); // check
 
-app.use(express.static("public"));
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-});
-
-// routes
 app.use(require("./public/api.js"));
 
-app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`);
-});
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+//     useNewUrlParser: true,
+//     useFindAndModify: false
+// });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => { console.log(`Server running on http://localhost:${PORT}`) });
