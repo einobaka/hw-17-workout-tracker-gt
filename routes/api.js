@@ -44,7 +44,7 @@ router.get("/workouts/range", (req, res) => {
 
 // Exercises
 router.put('/workouts/:id', (req, res) => {
-  let duration =+ req.body.duration
+  let duration = + req.body.duration
   db.Workout.findByIdAndUpdate(req.params.id, {
     $push: {
       exercises: req.body,
