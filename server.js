@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 // Routes**
 app.use('/', require('./routes/html.js'));
-app.use('/', require('./routes/api.js'));
+app.use('/api', require('./routes/api.js'));
 
 // To DB route**
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
