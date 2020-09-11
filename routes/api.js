@@ -10,18 +10,19 @@ router.get('/workouts', (req, res) => {
     .then(dbWorkout => {
       res.json({ 'Response': 'RES sent' })
       res.send(console.log(dbWorkout));
-      // res.json(dbWorkout);
+      res.json(dbWorkout);
     })
     .catch(err => {
       res.status(400).json(err);
     });
 });
 
+// Create new workout
 router.post('/workouts', (req, res) => {
   db.Workout.create({})
     .then(dbWorkout => {
       res.json({ 'Response': 'RES sent' })
-      // res.json(dbTransaction);
+      res.json(dbWorkout);
     })
     .catch(err => {
       res.status(400).json(err);
@@ -38,7 +39,6 @@ router.post('/workouts', (req, res) => {
 //       res.status(400).json(err);
 //     });
 // });
-
 
 
 module.exports = router;

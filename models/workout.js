@@ -4,22 +4,42 @@ const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
 
-    //   value: {
-    //     type: Number,
-    //     required: "Enter an amount"
-    //   },
-    //   date: {
-    //     type: Date,
-    //     default: Date.now
-    //   }
+    exercises: [
+        {
+            type: {
+                type: String,
+                trim: true
+            },
+            name: {
+                type: String,
+                trim: true
+            },
+            duration: {
+                type: Number
+            },
+            weight: {
+                type: Number
+            },
+            reps: {
+                type: Number
+            },
+            sets: {
+                type: Number
+            }
+
+        }
+    ],
 
     date: {
         type: Date,
         default: Date.now,
     },
-});
 
-// ExerciseSchema.methods.getLastWorkout()
+    totalDuration: {
+        type: Number
+    }
+
+});
 
 const Workout = mongoose.model("Workout", workoutSchema);
 

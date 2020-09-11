@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Routes**
-// app.use('/', require('./routes/html.js'));
+app.use('/', require('./routes/html.js'));
 app.use('/', require('./routes/api.js'));
 
 // To DB route**
