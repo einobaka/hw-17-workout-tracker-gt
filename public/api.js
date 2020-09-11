@@ -1,10 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-
-// router.get('/', (req, res) => {
-
-// })
-
 const API = {
   async getLastWorkout() {
     let res;
@@ -49,5 +42,3 @@ const API = {
     return json;
   },
 };
-
-module.exports = API
