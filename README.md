@@ -22,7 +22,7 @@ npm install
 
 ## Usage
 
-See video of usage on Youtube: [HW 17 - Eat-Da-Burger!](https://youtu.be/d_ePFZuuvzc)
+See video of usage on Youtube: [HW 17 - noSQL](https://youtu.be/d_ePFZuuvzc)
 
 ---
 
