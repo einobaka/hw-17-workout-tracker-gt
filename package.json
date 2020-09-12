@@ -15,5 +15,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1"
+  },
+  "env": {
+    "MONGODB_URI": "mongodb+srv://root:<password>@cluster0.othqk.mongodb.net/<dbname>?retryWrites=true&w=majority"
   }
 }
